@@ -59,6 +59,12 @@ app.get('/', (req, res) => {
   res.send('This is a lot of fun');
 });
 
+app.get('/secret', (req, res) => {
+  // Use req.log (a `pino` instance) to log JSON:
+ // req.log.info({message: 'Hello from Node.js Starter Application!'});
+  res.send('you found the secret');
+});
+
 app.get('*', (req, res) => {
   res.status(404).send("Not Found");
 });
